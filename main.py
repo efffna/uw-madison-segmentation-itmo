@@ -16,20 +16,11 @@ app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_credentials=True, 
 img = Segmentation()
 
 
-#@app.post("/upload_files")
-#async def create_upload_files(files: List[UploadFile]):
-#    print(files)
-#    #return {"filenames": [file.filename for file in files]}
-
-
 @app.post("/upload_files")
-async def upload_files(files: UploadFile = File(...)):
-    print("___")
+async def upload_files(files: List[UploadFile] = File(...)):
     for file in files:
         print(file)
- 
-
-
+        
 
 @app.get("/get_mask")
 def get_img():    
