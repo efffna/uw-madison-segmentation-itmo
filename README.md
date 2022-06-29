@@ -1,1 +1,0 @@
-# uw-madison-segmentation-itmo
