@@ -1,0 +1,124 @@
+.title{
+    display: flex;
+    font-size: 30px;
+    margin-top: 110px;
+    justify-content: center;
+}
+
+.title2{
+    display: flex;
+    font-size: 20px;
+    justify-content: center;
+}
+
+.upload {
+    margin-top: 110px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.uploadStatus {
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+.show_image{
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+}
+
+.mask{
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.image {
+    display: flex;
+    justify-content: center;
+}
+
+.back{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.inputfile {
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.box1{
+    width: 100px;
+    height: 20px;
+    background: rgb(197, 65, 87);
+    color: #ffffff;
+
+  }
+  .box2{
+    margin-top: 1px;
+    width: 100px;
+    height: 20px;
+    
+    background: #97d0e9;
+    color: #ffffff;
+
+  }
+  .box3{
+    margin-top: 1px;
+    width: 100px;
+    height: 20px;
+    background: rgb(205, 247, 172);
+    color: #ffffff;
+    
+  }
+
+  .legend li:nth-child(1) {
+    border-left: 1.25em solid rgb(205, 247, 172);
+    list-style-type: none;
+    padding: 10px;
+    margin-top: 1px;
+    vertical-align: top;
+    list-style-type: none;
+    background: #FFF;
+    padding: 7px;
+    font-size: 13px;
+    box-shadow: 1px 1px 0 #DDD, 2px 2px 0 #BBB;
+
+}
+
+.legend li:nth-child(2) {
+    border-left: 1.25em solid rgb(58, 99, 116);
+    list-style-type: none;
+    padding: 10px;
+    margin-top: 1px;
+    vertical-align: top;
+    list-style-type: none;
+    background: #FFF;
+    padding: 7px;
+    font-size: 13px;
+    box-shadow: 1px 1px 0 #DDD, 2px 2px 0 #BBB;
+
+}
+
+.legend li:nth-child(3) {
+    border-left: 1.25em solid rgb(197, 65, 87);
+    list-style-type: none;
+    padding: 10px;
+    margin-top: 1px;
+    vertical-align: top;
+    list-style-type: none;
+    background: #FFF;
+    padding: 7px;
+    font-size: 13px;
+    box-shadow: 1px 1px 0 #DDD, 2px 2px 0 #BBB;
+
+}
+
+.legend em {
+    font-style: normal;
+}
