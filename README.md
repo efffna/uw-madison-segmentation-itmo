@@ -12,6 +12,6 @@
 * uw-madison-gi-tract-image-segmentation
 * pytorch-segmentation-models-lib
 * uwmgi-mask-dataset
-* uwgaifullin
+* uwgaifullin (здесь находятся веса обученной модели)
 
 Добавление происходит путем нажатия на кнопку `Add data` в правом верхнем углу.
