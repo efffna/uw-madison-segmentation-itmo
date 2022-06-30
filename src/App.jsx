@@ -25,22 +25,15 @@ export default function App() {
     const sendImg = (files) => {
         let formData = new FormData()
         
-
-
         for (let i = 0; i < files.length; i++) {
-            formData.append(`images[${i}]`, files[i])
+            formData.append('files', files[i], files[i].name)
         }
 
-
         const values = [...formData.entries()];
-        
         console.log(values);
-
         fetch(upload_url, {
             method: "POST",
-            body: formData,
-            headers: {
-                'Content-Type': 'multipart/form-data'}
+            body: formData
 
         })
             .then(setUploadStatus(".."))
