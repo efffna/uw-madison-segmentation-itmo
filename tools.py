@@ -1,4 +1,3 @@
-import torch
 from torch import nn
 import numpy as np
 from PIL import Image
@@ -10,8 +9,8 @@ from torchvision import transforms
 
 
 PATH_MODEL = 'models/torchscript.pt'
-PATH_MASK = 'temp/mask.png'
 PATH_OUT = 'temp/out.png'
+
 
 class Segmentation:
     def __init__(self):
@@ -38,12 +37,30 @@ class Segmentation:
         image = torch.tensor(image,dtype=torch.float32)
         self.preproc_image = image
 
+    def gif_create(self): 
+        frames = []
+        for frame_number in range(0, 200):
+            try:
+                frame = Image.open(f'temp/out{frame_number}.png')
+                frames.append(frame)
+            except Exception as e:
+                pass
+
+        frames[0].save(
+            'out.gif',
+            save_all=True,
+            append_images=frames[1:],  
+            optimize=True,
+            duration=100,
+            loop=0
+            )
+
     def get_predict(self):
         pred = self.model(self.preproc_image )
         mask = (nn.Sigmoid()(pred)>0.5).double()
         mask = torch.mean(torch.stack([mask], dim=0), dim=0)
         mask = (mask[0].permute((1,2,0))>0.5).to(torch.uint8).cpu().detach().numpy() * 255 
-        cv2.imwrite(PATH_MASK, mask)
+        #cv2.imwrite(PATH_MASK, mask)
         self.show_img(mask)
 
     def show_img(self,mask=None):
