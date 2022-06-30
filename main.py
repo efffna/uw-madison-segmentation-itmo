@@ -7,9 +7,10 @@ import os
 
 
 PATH_OUT = 'out.gif'
+
+
 app = FastAPI()
-app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_credentials=True, allow_methods=["*"],
-                   allow_headers=["*"])
+app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_credentials=True, allow_methods=["*"],allow_headers=["*"])
 img = Segmentation()
 
 
@@ -26,6 +27,7 @@ async def upload(files: List[UploadFile] = File(...)):
         count += 1
     img.gif_create()
 
+    
 @app.get("/get_mask")
 def get_img():    
     return FileResponse(PATH_OUT)
