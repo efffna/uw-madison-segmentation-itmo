@@ -12,6 +12,7 @@ app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_credentials=True, 
                    allow_headers=["*"])
 img = Segmentation()
 
+
 @app.post("/upload_files")
 async def upload(files: List[UploadFile] = File(...)):
     count = 0
